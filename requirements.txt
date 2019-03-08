@@ -1,0 +1,4 @@
+tqdm
+click
+tensorflow==1.4
+numpy

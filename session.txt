@@ -1,0 +1,877 @@
+# feasible actions: 313
+# diaact: 36
+# slot: 29
+	MDBT: The vocabulary contains about 66199 word embeddings
+	MDBT: Loading the ontology....................
+	MDBT: Adding new word: 09;45
+	MDBT: Adding new word: 16;15
+	MDBT: Adding new word: aylesbray
+	MDBT: Adding new word: stortford
+	MDBT: Adding new word: gastropub
+	MDBT: We have about 672 values
+	MDBT: The data contains about 989 dialogues
+	MDBT: Setting up type of the recurrent network to bidirectional True...........................
+	MDBT: mdbt model restored from  /home/zhuqi/DialogZone/data/mdbt/models/model-1
+Loading goal model is done
+-----Goal-----
+{
+    "hotel": {
+        "info": {
+            "type": "guesthouse",
+            "parking": "yes",
+            "pricerange": "cheap",
+            "area": "south",
+            "stars": "4"
+        },
+        "reqt": {
+            "internet": "?",
+            "address": "?"
+        },
+        "book": {
+            "stay": "2",
+            "day": "thursday",
+            "people": "1"
+        },
+        "fail_book": {
+            "stay": "2",
+            "day": "wednesday",
+            "people": "1"
+        },
+        "fail_info": {
+            "type": "guesthouse",
+            "parking": "yes",
+            "pricerange": "cheap",
+            "area": "south",
+            "stars": "2"
+        },
+        "booked": "?"
+    },
+    "attraction": {
+        "info": {
+            "area": "centre",
+            "type": "nightclub"
+        },
+        "reqt": {
+            "phone": "?",
+            "address": "?",
+            "postcode": "?"
+        }
+    },
+    "taxi": {
+        "info": {
+            "arriveBy": "13:30"
+        },
+        "reqt": {
+            "car type": "?",
+            "phone": "?"
+        }
+    }
+}
+-----Goal-----
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {}
+	user da: {'Hotel-Inform': [['Type', 'guesthouse'], ['Price', 'cheap'], ['Parking', 'yes']]}
+	user: i want the Type to be guesthouse, i want the Price to be cheap, i want the Parking to be yes
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': 'cheap', 'parking': 'yes', 'pricerange': 'cheap', 'stars': '', 'internet': '', 'type': 'guest house'}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': 'museum', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': 'chinese', 'pricerange': 'cheap', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': 'place', 'departure': 'place', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Internet', '?'], ['Name', '?']]}
+	user da: {'Hotel-Inform': [['Name', 'not mentioned'], ['Area', 'south'], ['Stars', '2']]}
+	user: i want the Name to be not mentioned, i want the Area to be south, i want the Stars to be 2
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': 'south', 'parking': 'yes', 'pricerange': 'cheap', 'stars': '', 'internet': '', 'type': 'guest house'}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Name', '?']]}
+	user da: {'Hotel-Inform': [['Name', 'not mentioned']]}
+	user: i want the Name to be not mentioned
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': 'southern aylesbray', 'parking': 'yes', 'pricerange': 'cheap', 'stars': '', 'internet': '', 'type': 'guest house'}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Stars', '?'], ['Internet', '?'], ['Name', '?']]}
+	user da: {'Hotel-Inform': [['Name', 'not mentioned'], ['Stars', '2']]}
+	user: i want the Name to be not mentioned, i want the Stars to be 2
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': 'yes', 'pricerange': 'cheap', 'stars': '', 'internet': '', 'type': 'guest house'}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Choice': [['Choice', 2], ['name', 'name-value0'], ['Area', 'area-value']]}
+	user da: {'Hotel-Request': [['Internet', '?'], ['Addr', '?']], 'Hotel-Inform': [['Stay', '2'], ['People', '1']]}
+	user: what is the Internet, what is the Addr, i want the Stay to be 2, i want the People to be 1
+	-- turn end ---
+Hotel-Request
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': 'centre', 'parking': 'yes', 'pricerange': 'cheap', 'stars': '', 'internet': '', 'type': 'guest house'}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Inform': [['Internet', 'internet-value'], ['Addr', 'addr-value']], 'Hotel-Request': [['Name', '?']]}
+	user da: {'Hotel-Inform': [['Name', 'not mentioned'], ['Day', 'wednesday']]}
+	user: i want the Name to be not mentioned, i want the Day to be wednesday
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': 'centre', 'parking': 'yes', 'pricerange': 'cheap', 'stars': '', 'internet': '', 'type': 'guest house'}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Choice': [['Choice', 2], ['name', 'name-value1'], ['Depart', 'depart-value'], ['Type', 'type-value']]}
+	user da: {'Attraction-Inform': [['Type', 'nightclub']]}
+	user: i want the Type to be nightclub
+	-- turn end ---
+Attraction-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': 'centre', 'parking': 'yes', 'pricerange': 'cheap', 'stars': '', 'internet': '', 'type': 'guest house'}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Attraction-Inform': [['Type', 'type-value'], ['Name', 'name-value0']]}
+	user da: {'Attraction-Inform': [['Type', 'nightclub']]}
+	user: i want the Type to be nightclub
+	-- turn end ---
+Attraction-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': 'centre', 'parking': 'yes', 'pricerange': 'cheap', 'stars': '', 'internet': '', 'type': 'guest house'}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Attraction-Choice': [['Choice', 5], ['name', 'name-value4']]}
+	user da: {'Attraction-Inform': [['Area', 'centre']], 'Attraction-Request': [['Phone', '?']]}
+	user: i want the Area to be centre, what is the Phone
+	-- turn end ---
+Attraction-Inform
+Attraction-Request
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': 'centre', 'parking': 'yes', 'pricerange': 'cheap', 'stars': '', 'internet': '', 'type': 'guest house'}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Attraction-Request': [['Area', '?']], 'Attraction-Inform': [['Phone', 'phone-value']]}
+	user da: {'Attraction-Inform': [['Area', 'centre']], 'Attraction-Request': [['Addr', '?'], ['Post', '?']]}
+	user: i want the Area to be centre, what is the Addr, what is the Post
+	-- turn end ---
+['name', ['name-value0', 'name-value1', 'name-value2', 'name-value3']]
+['name', ['name-value0', 'name-value1', 'name-value2', 'name-value3']]
+['name', ['name-value0', 'name-value1', 'name-value2', 'name-value3']]
+['name', ['name-value0', 'name-value1', 'name-value2', 'name-value3']]
+Attraction-Inform
+Attraction-Request
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': 'centre', 'parking': 'yes', 'pricerange': 'cheap', 'stars': '', 'internet': '', 'type': 'guest house'}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Attraction-Choice': [['Name', 'name-value0'], ['Name', 'name-value1'], ['Name', 'name-value2'], ['Name', 'name-value3']], 'Attraction-Inform': [['Addr', 'addr-value'], ['Post', 'post-value']]}
+	user da: {'general-bye': [['none', 'none']]}
+	user: bye
+	-- turn end ---
+task completion: False
+---- session end ----
+-----Goal-----
+{
+    "train": {
+        "info": {
+            "destination": "cambridge",
+            "day": "friday",
+            "departure": "bishops stortford",
+            "leaveAt": "15:45"
+        },
+        "reqt": {
+            "duration": "?",
+            "arriveBy": "?",
+            "trainID": "?"
+        },
+        "book": {
+            "people": "2"
+        },
+        "booked": "?"
+    },
+    "attraction": {
+        "info": {
+            "area": "centre"
+        },
+        "reqt": {
+            "entrance fee": "?",
+            "type": "?",
+            "address": "?",
+            "postcode": "?",
+            "phone": "?"
+        }
+    }
+}
+-----Goal-----
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {}
+	user da: {'Train-Inform': [['Leave', '15:45'], ['Depart', 'bishops stortford'], ['Day', 'friday']]}
+	user: i want the Leave to be 15:45, i want the Depart to be bishops stortford, i want the Day to be friday
+	-- turn end ---
+Train-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': 'friday', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Train-Request': [['Leave', '?'], ['Arrive', '?']]}
+	user da: {'Train-Inform': [['Leave', '15:45'], ['Dest', 'cambridge']]}
+	user: i want the Leave to be 15:45, i want the Dest to be cambridge
+	-- turn end ---
+Train-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': 'friday', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Train-Request': [['Leave', '?'], ['Arrive', '?']]}
+	user da: {'Train-Inform': [['Leave', '15:45']]}
+	user: i want the Leave to be 15:45
+	-- turn end ---
+Train-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': 'friday', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Train-Request': [['Leave', '?'], ['Arrive', '?']]}
+	user da: {'Train-Inform': [['Leave', '15:45']], 'Train-Request': [['TrainID', '?']]}
+	user: i want the Leave to be 15:45, what is the TrainID
+	-- turn end ---
+Train-Inform
+Train-Request
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': 'friday', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Train-Request': [['Leave', '?'], ['Arrive', '?'], ['Leave', '?'], ['Arrive', '?']]}
+	user da: {'Train-Inform': [['Leave', '15:45']]}
+	user: i want the Leave to be 15:45
+	-- turn end ---
+Cannot handle the item in preditions: train-leave at-15:45: 0.06751605123281479
+Train-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': 'monday', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Train-Request': [['Leave', '?'], ['Arrive', '?']]}
+	user da: {'Train-Inform': [['Leave', '15:45']], 'Train-Request': [['Duration', '?']]}
+	user: i want the Leave to be 15:45, what is the Duration
+	-- turn end ---
+Cannot handle the item in preditions: train-leave at-15:45: 0.06602586060762405
+Train-Inform
+Train-Request
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': 'monday', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Train-Request': [['Leave', '?'], ['Arrive', '?'], ['Leave', '?'], ['Arrive', '?']]}
+	user da: {'Train-Inform': [['Leave', '15:45'], ['People', '2']], 'Train-Request': [['Arrive', '?']]}
+	user: i want the Leave to be 15:45, i want the People to be 2, what is the Arrive
+	-- turn end ---
+Train-Inform
+Train-Request
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': 'monday', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Train-Request': [['Leave', '?'], ['Arrive', '?'], ['Leave', '?'], ['Arrive', '?']]}
+	user da: {'Train-Inform': [['Leave', '15:45']], 'Attraction-Inform': [['Area', 'centre']], 'Attraction-Request': [['Post', '?']]}
+	user: i want the Leave to be 15:45, i want the Area to be centre, what is the Post
+	-- turn end ---
+Train-Inform
+['name', ['name-value0', 'name-value1']]
+['name', ['name-value0', 'name-value1']]
+Attraction-Inform
+Attraction-Request
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': 'monday', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Train-Request': [['Leave', '?'], ['Arrive', '?']], 'Attraction-Choice': [['Name', 'name-value0'], ['Name', 'name-value1']], 'Attraction-Inform': [['Post', 'post-value']]}
+	user da: {'Train-Inform': [['Leave', '15:45']]}
+	user: i want the Leave to be 15:45
+	-- turn end ---
+Cannot handle the item in preditions: train-leave at-15:45: 0.06936732679605484
+Train-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': 'monday', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Train-Request': [['Leave', '?'], ['Arrive', '?']]}
+	user da: {'Train-Inform': [['Leave', '15:45']], 'Attraction-Request': [['Fee', '?'], ['Type', '?']]}
+	user: i want the Leave to be 15:45, what is the Fee, what is the Type
+	-- turn end ---
+Train-Inform
+Attraction-Request
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': 'monday', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Train-Request': [['Leave', '?'], ['Arrive', '?']], 'Attraction-Inform': [['Fee', 'fee-value'], ['Type', 'type-value']]}
+	user da: {'general-bye': [['none', 'none']]}
+	user: bye
+	-- turn end ---
+task completion: False
+---- session end ----
+-----Goal-----
+{
+    "restaurant": {
+        "info": {
+            "pricerange": "expensive"
+        },
+        "reqt": {
+            "phone": "?",
+            "address": "?"
+        }
+    },
+    "attraction": {
+        "info": {
+            "area": "centre",
+            "type": "museum"
+        },
+        "reqt": {
+            "postcode": "?",
+            "phone": "?"
+        }
+    }
+}
+-----Goal-----
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {}
+	user da: {'general-greet': [['none', 'none']], 'Restaurant-Inform': [['Price', 'expensive']]}
+	user: bye, i want the Price to be expensive
+	-- turn end ---
+general-greet
+Restaurant-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': 'expensive', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': 'expensive', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': 'place', 'departure': 'place', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': '', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Restaurant-Request': [['Area', '?'], ['Name', '?'], ['Food', '?']]}
+	user da: {'Restaurant-Inform': [['Food', 'not mentioned'], ['Name', 'not mentioned'], ['Area', 'not mentioned']]}
+	user: i want the Food to be not mentioned, i want the Name to be not mentioned, i want the Area to be not mentioned
+	-- turn end ---
+Restaurant-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Restaurant-Request': [['Name', '?']]}
+	user da: {'Restaurant-Inform': [['Name', 'not mentioned']], 'Restaurant-Request': [['Addr', '?']]}
+	user: i want the Name to be not mentioned, what is the Addr
+	-- turn end ---
+Restaurant-Inform
+Restaurant-Request
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Restaurant-Request': [['Food', '?'], ['Price', '?'], ['Name', '?'], ['Area', '?']], 'Restaurant-Inform': [['Addr', 'addr-value']]}
+	user da: {'Restaurant-Inform': [['Area', 'not mentioned'], ['Name', 'not mentioned']]}
+	user: i want the Area to be not mentioned, i want the Name to be not mentioned
+	-- turn end ---
+Restaurant-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Restaurant-Request': [['Food', '?'], ['Area', '?'], ['Name', '?'], ['Price', '?']]}
+	user da: {'Restaurant-Inform': [['Price', 'expensive'], ['Name', 'not mentioned']]}
+	user: i want the Price to be expensive, i want the Name to be not mentioned
+	-- turn end ---
+Restaurant-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Restaurant-Request': [['Food', '?'], ['Area', '?'], ['Name', '?'], ['Price', '?']]}
+	user da: {'Restaurant-Inform': [['Price', 'expensive'], ['Name', 'not mentioned'], ['Area', 'not mentioned'], ['Food', 'not mentioned']]}
+	user: i want the Price to be expensive, i want the Name to be not mentioned, i want the Area to be not mentioned, i want the Food to be not mentioned
+	-- turn end ---
+Restaurant-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Restaurant-Request': [['Area', '?'], ['Name', '?'], ['Price', '?'], ['Food', '?']]}
+	user da: {'Restaurant-Inform': [['Food', 'not mentioned'], ['Price', 'expensive']]}
+	user: i want the Food to be not mentioned, i want the Price to be expensive
+	-- turn end ---
+Restaurant-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Restaurant-Inform': [['Area', 'area-value']]}
+	user da: {'Restaurant-Inform': [['Name', 'not mentioned'], ['Area', 'not mentioned']], 'Restaurant-Request': [['Phone', '?']], 'Attraction-Inform': [['Type', 'museum']]}
+	user: i want the Name to be not mentioned, i want the Area to be not mentioned, what is the Phone, i want the Type to be museum
+	-- turn end ---
+Restaurant-Inform
+Restaurant-Request
+Attraction-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Restaurant-Inform': [['Name', 'name-value0'], ['Phone', 'phone-value']], 'Attraction-Inform': [['Name', 'name-value0'], ['Area', 'area-value']]}
+	user da: {'Attraction-Inform': [['Area', 'centre']]}
+	user: i want the Area to be centre
+	-- turn end ---
+Attraction-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Attraction-Request': [['Name', '?']]}
+	user da: {'Attraction-Inform': [['Name', 'not mentioned']], 'Attraction-Request': [['Phone', '?'], ['Post', '?']]}
+	user: i want the Name to be not mentioned, what is the Phone, what is the Post
+	-- turn end ---
+Attraction-Inform
+Attraction-Request
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Attraction-Choice': [['Choice', 3], ['name', 'name-value2'], ['Open', 'open-value'], ['People', 'people-value']], 'Attraction-Inform': [['Phone', 'phone-value'], ['Post', 'post-value']]}
+	user da: {'general-bye': [['none', 'none']]}
+	user: bye
+	-- turn end ---
+task completion: False
+---- session end ----
+-----Goal-----
+{
+    "restaurant": {
+        "info": {
+            "food": "thai",
+            "pricerange": "expensive",
+            "area": "centre"
+        },
+        "reqt": {
+            "phone": "?",
+            "address": "?"
+        },
+        "fail_info": {
+            "food": "portuguese",
+            "pricerange": "expensive",
+            "area": "centre"
+        }
+    }
+}
+-----Goal-----
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {}
+	user da: {'Restaurant-Inform': [['Food', 'portuguese']]}
+	user: i want the Food to be portuguese
+	-- turn end ---
+Restaurant-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': 'theatre', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': 'portuguese', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': 'place', 'departure': 'place', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Restaurant-Request': [['Price', '?'], ['Area', '?'], ['Name', '?']]}
+	user da: {'Restaurant-Inform': [['Name', 'not mentioned'], ['Area', 'centre'], ['Price', 'expensive']]}
+	user: i want the Name to be not mentioned, i want the Area to be centre, i want the Price to be expensive
+	-- turn end ---
+Restaurant-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': 'expensive', 'name': '', 'area': 'centre'}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Restaurant-Request': [['Food', '?'], ['Name', '?']]}
+	user da: {'Restaurant-Inform': [['Name', 'not mentioned'], ['Food', 'portuguese']], 'Restaurant-Request': [['Phone', '?']]}
+	user: i want the Name to be not mentioned, i want the Food to be portuguese, what is the Phone
+	-- turn end ---
+Restaurant-Inform
+Restaurant-Request
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': 'portuguese', 'pricerange': 'expensive', 'name': '', 'area': 'centre'}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Restaurant-Choice': [['Choice', 2], ['name', 'name-value1'], ['Arrive', 'arrive-value'], ['Post', 'post-value']], 'Restaurant-Inform': [['Phone', 'phone-value']]}
+	user da: {'Restaurant-Request': [['Addr', '?']]}
+	user: what is the Addr
+	-- turn end ---
+Restaurant-Request
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': 'expensive', 'name': '', 'area': 'centre'}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Restaurant-Inform': [['Addr', 'addr-value']]}
+	user da: {'general-bye': [['none', 'none']]}
+	user: bye
+	-- turn end ---
+task completion: True
+---- session end ----
+-----Goal-----
+{
+    "hotel": {
+        "info": {
+            "pricerange": "expensive",
+            "internet": "yes",
+            "area": "centre"
+        },
+        "reqt": {
+            "parking": "?"
+        },
+        "book": {
+            "stay": "5",
+            "day": "wednesday",
+            "people": "6"
+        },
+        "fail_book": {
+            "stay": "5",
+            "day": "tuesday",
+            "people": "6"
+        },
+        "booked": "?"
+    }
+}
+-----Goal-----
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {}
+	user da: {'general-greet': [['none', 'none']], 'Hotel-Inform': [['Price', 'expensive'], ['Internet', 'yes'], ['Area', 'centre']]}
+	user: bye, i want the Price to be expensive, i want the Internet to be yes, i want the Area to be centre
+	-- turn end ---
+general-greet
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': 'centre', 'parking': '', 'pricerange': 'expensive', 'stars': '', 'internet': 'yes', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': 'centre'}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': 'expensive', 'name': '', 'area': 'centre'}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': 'place', 'departure': 'place', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Stars', '?'], ['Name', '?'], ['Type', '?']]}
+	user da: {'Hotel-Inform': [['Type', 'not mentioned'], ['Name', 'not mentioned'], ['Stars', 'not mentioned']]}
+	user: i want the Type to be not mentioned, i want the Name to be not mentioned, i want the Stars to be not mentioned
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Choice': [['Choice', 2], ['name', 'name-value0']]}
+	user da: {'Hotel-Request': [['Parking', '?']], 'Hotel-Inform': [['People', '6']]}
+	user: what is the Parking, i want the People to be 6
+	-- turn end ---
+Hotel-Request
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Inform': [['Parking', 'parking-value']], 'Hotel-Request': [['Area', '?'], ['Type', '?'], ['Stars', '?'], ['Name', '?'], ['Parking', '?'], ['Internet', '?'], ['Price', '?']]}
+	user da: {'Hotel-Inform': [['Price', 'expensive'], ['Internet', 'yes'], ['Name', 'not mentioned']]}
+	user: i want the Price to be expensive, i want the Internet to be yes, i want the Name to be not mentioned
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Parking', '?']]}
+	user da: {'Hotel-Inform': [['Stars', 'not mentioned'], ['Type', 'not mentioned']]}
+	user: i want the Stars to be not mentioned, i want the Type to be not mentioned
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Internet', '?']]}
+	user da: {'Hotel-Inform': [['Internet', 'yes'], ['Area', 'centre'], ['Stay', '5']]}
+	user: i want the Internet to be yes, i want the Area to be centre, i want the Stay to be 5
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Internet', '?'], ['Price', '?'], ['Parking', '?'], ['Name', '?']]}
+	user da: {'Hotel-Inform': [['Name', 'not mentioned'], ['Price', 'expensive'], ['Internet', 'yes']]}
+	user: i want the Name to be not mentioned, i want the Price to be expensive, i want the Internet to be yes
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Choice': [['Choice', 2], ['name', 'name-value0'], ['Trainid', 'trainid-value'], ['Name', 'name-value0']]}
+	user da: {'Hotel-Inform': [['Day', 'tuesday']]}
+	user: i want the Day to be tuesday
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Price', '?'], ['Parking', '?'], ['Type', '?'], ['Area', '?']]}
+	user da: {'Hotel-Inform': [['Area', 'centre']]}
+	user: i want the Area to be centre
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Parking', '?'], ['Area', '?'], ['Name', '?'], ['Price', '?']]}
+	user da: {'Hotel-Inform': [['Price', 'expensive']]}
+	user: i want the Price to be expensive
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Choice': [['Choice', 5], ['name', 'name-value2'], ['Address', 'address-value'], ['None', 'none-value']]}
+	user da: {'general-bye': [['none', 'none']]}
+	user: bye
+	-- turn end ---
+task completion: False
+---- session end ----
+-----Goal-----
+{
+    "restaurant": {
+        "info": {
+            "food": "african",
+            "pricerange": "expensive",
+            "area": "centre"
+        },
+        "reqt": {
+            "address": "?"
+        },
+        "book": {
+            "day": "saturday",
+            "people": "3",
+            "time": "19:00"
+        },
+        "fail_info": {
+            "food": "african",
+            "pricerange": "expensive",
+            "area": "north"
+        },
+        "booked": "?"
+    },
+    "hotel": {
+        "info": {
+            "type": "hotel",
+            "pricerange": "cheap",
+            "area": "west",
+            "stars": "4"
+        },
+        "reqt": {
+            "postcode": "?",
+            "phone": "?"
+        }
+    }
+}
+-----Goal-----
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {}
+	user da: {'Restaurant-Inform': [['Food', 'african'], ['Area', 'north']]}
+	user: i want the Food to be african, i want the Area to be north
+	-- turn end ---
+Restaurant-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': 'north', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': 'north'}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': 'north'}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': 'place', 'departure': 'place', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Restaurant-Request': [['Name', '?'], ['Food', '?'], ['Price', '?']]}
+	user da: {'Restaurant-Inform': [['Price', 'expensive'], ['Food', 'african']]}
+	user: i want the Price to be expensive, i want the Food to be african
+	-- turn end ---
+Restaurant-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': 'expensive', 'name': '', 'area': 'north'}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Restaurant-Request': [['Name', '?'], ['Food', '?']]}
+	user da: {'Restaurant-Inform': [['Food', 'african'], ['Name', 'not mentioned']], 'Restaurant-Request': [['Addr', '?']]}
+	user: i want the Food to be african, i want the Name to be not mentioned, what is the Addr
+	-- turn end ---
+Restaurant-Inform
+Restaurant-Request
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': 'expensive', 'name': '', 'area': 'north'}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Restaurant-Request': [['Name', '?'], ['Food', '?']], 'Restaurant-Inform': [['Addr', 'addr-value']]}
+	user da: {'Restaurant-Inform': [['Food', 'african'], ['Name', 'not mentioned'], ['Time', '19:00'], ['People', '3']]}
+	user: i want the Food to be african, i want the Name to be not mentioned, i want the Time to be 19:00, i want the People to be 3
+	-- turn end ---
+Restaurant-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': 'expensive', 'name': '', 'area': 'north'}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Restaurant-Inform': [['Name', 'name-value0'], ['Price', 'pricerange-value'], ['Area', 'area-value']]}
+	user da: {'Restaurant-Inform': [['Area', 'north'], ['Price', 'expensive']]}
+	user: i want the Area to be north, i want the Price to be expensive
+	-- turn end ---
+Restaurant-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': 'expensive', 'name': '', 'area': 'north'}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Restaurant-Request': [['Name', '?'], ['Food', '?']]}
+	user da: {'Restaurant-Inform': [['Food', 'african'], ['Name', 'not mentioned'], ['Day', 'saturday']]}
+	user: i want the Food to be african, i want the Name to be not mentioned, i want the Day to be saturday
+	-- turn end ---
+Restaurant-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': 'expensive', 'name': '', 'area': 'north'}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Restaurant-Request': [['Name', '?']]}
+	user da: {'Restaurant-Inform': [['Name', 'not mentioned']]}
+	user: i want the Name to be not mentioned
+	-- turn end ---
+Restaurant-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': 'expensive', 'name': '', 'area': 'north'}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Restaurant-Request': [['Food', '?'], ['Name', '?']]}
+	user da: {'Restaurant-Inform': [['Name', 'not mentioned'], ['Food', 'african']], 'Hotel-Inform': [['Type', 'hotel'], ['Price', 'cheap']]}
+	user: i want the Name to be not mentioned, i want the Food to be african, i want the Type to be hotel, i want the Price to be cheap
+	-- turn end ---
+Restaurant-Inform
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': 'north', 'parking': '', 'pricerange': 'expensive', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': 'expensive', 'name': '', 'area': 'north'}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Restaurant-Inform': [['Price', 'pricerange-value'], ['Name', 'name-value0']], 'Hotel-Inform': [['Name', 'name-value0'], ['Stars', 'stars-value'], ['Internet', 'internet-value'], ['Parking', 'parking-value']]}
+	user da: {'Hotel-Inform': [['Stars', '4']]}
+	user: i want the Stars to be 4
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': 'expensive', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': 'expensive', 'name': '', 'area': 'north'}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Stars', '?']]}
+	user da: {'Hotel-Inform': [['Stars', '4'], ['Area', 'west']], 'Restaurant-Inform': [['Price', 'expensive']]}
+	user: i want the Stars to be 4, i want the Area to be west, i want the Price to be expensive
+	-- turn end ---
+Hotel-Inform
+Restaurant-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': 'west', 'parking': '', 'pricerange': 'expensive', 'stars': '4', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': 'expensive', 'name': '', 'area': 'west'}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Internet', '?'], ['Name', '?'], ['Parking', '?'], ['Type', '?']], 'Restaurant-Choice': [['Choice', 5], ['name', 'name-value0'], ['Stay', 'stay-value'], ['Arrive', 'arrive-value']]}
+	user da: {'general-bye': [['none', 'none']]}
+	user: bye
+	-- turn end ---
+task completion: False
+---- session end ----
+-----Goal-----
+{
+    "restaurant": {
+        "info": {
+            "food": "chinese",
+            "pricerange": "expensive",
+            "area": "south"
+        },
+        "reqt": {
+            "phone": "?",
+            "address": "?"
+        }
+    }
+}
+-----Goal-----
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {}
+	user da: {'Restaurant-Inform': [['Price', 'expensive'], ['Area', 'south']]}
+	user: i want the Price to be expensive, i want the Area to be south
+	-- turn end ---
+Restaurant-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': 'south', 'parking': '', 'pricerange': 'expensive', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': 'south'}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': 'expensive', 'name': '', 'area': 'south'}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': 'place', 'departure': 'place', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': 'wednesday', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Restaurant-Inform': [['Name', 'name-value0']]}
+	user da: {'Restaurant-Inform': [['Food', 'chinese']], 'Restaurant-Request': [['Addr', '?'], ['Phone', '?']]}
+	user: i want the Food to be chinese, what is the Addr, what is the Phone
+	-- turn end ---
+Restaurant-Inform
+Restaurant-Request
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': 'chinese', 'pricerange': 'expensive', 'name': '', 'area': 'south'}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Restaurant-Choice': [['Choice', 4], ['name', 'name-value0'], ['Dest', 'dest-value']], 'Restaurant-Inform': [['Addr', 'addr-value'], ['Phone', 'phone-value']]}
+	user da: {'general-bye': [['none', 'none']]}
+	user: bye
+	-- turn end ---
+task completion: True
+---- session end ----
+-----Goal-----
+{
+    "hospital": {
+        "info": {
+            "department": "infectious diseases"
+        },
+        "reqt": {
+            "address": "?",
+            "phone": "?",
+            "postcode": "?"
+        }
+    }
+}
+-----Goal-----
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {}
+	user da: {'Hospital-Inform': [['Department', 'infectious diseases']], 'Hospital-Request': [['Post', '?'], ['Phone', '?'], ['Addr', '?']]}
+	user: i want the Department to be infectious diseases, what is the Post, what is the Phone, what is the Addr
+	-- turn end ---
+Hospital-Inform
+Hospital-Request
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': 'centre', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': 'centre'}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': 'centre'}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': 'sunday', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Hospital-Request': [['Department', '?']], 'Hospital-Inform': [['Post', 'post-value'], ['Phone', 'phone-value'], ['Addr', 'addr-value']]}
+	user da: {'general-bye': [['none', 'none']]}
+	user: bye
+	-- turn end ---
+task completion: True
+---- session end ----
+-----Goal-----
+{
+    "hotel": {
+        "info": {
+            "parking": "yes",
+            "pricerange": "cheap",
+            "area": "centre",
+            "stars": "4"
+        },
+        "reqt": {
+            "postcode": "?"
+        },
+        "book": {
+            "stay": "3",
+            "day": "friday",
+            "people": "8"
+        },
+        "booked": "?"
+    },
+    "train": {
+        "info": {
+            "destination": "stansted airport",
+            "day": "monday",
+            "departure": "cambridge",
+            "leaveAt": "10:15"
+        },
+        "reqt": {
+            "duration": "?",
+            "price": "?",
+            "trainID": "?"
+        },
+        "book": {
+            "people": "2"
+        },
+        "booked": "?"
+    }
+}
+-----Goal-----
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {}
+	user da: {'general-greet': [['none', 'none']], 'Hotel-Inform': [['Stars', '4']]}
+	user: bye, i want the Stars to be 4
+	-- turn end ---
+general-greet
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '4', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': 'place', 'departure': 'place', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': '', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Name', '?'], ['Type', '?'], ['Price', '?'], ['Internet', '?'], ['Parking', '?'], ['Area', '?']]}
+	user da: {'Hotel-Inform': [['Area', 'centre'], ['Parking', 'yes'], ['Internet', 'not mentioned'], ['Price', 'cheap']]}
+	user: i want the Area to be centre, i want the Parking to be yes, i want the Internet to be not mentioned, i want the Price to be cheap
+	-- turn end ---
+['name', ['name-value0', 'name-value1', 'name-value2', 'name-value3']]
+['name', ['name-value0', 'name-value1', 'name-value2', 'name-value3']]
+['name', ['name-value0', 'name-value1', 'name-value2', 'name-value3']]
+['name', ['name-value0', 'name-value1', 'name-value2', 'name-value3']]
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Choice': [['Name', 'name-value0'], ['Name', 'name-value1'], ['Name', 'name-value2'], ['Name', 'name-value3']]}
+	user da: {'Hotel-Inform': [['Type', 'not mentioned']]}
+	user: i want the Type to be not mentioned
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Parking', '?']]}
+	user da: {'Hotel-Inform': [['Parking', 'yes'], ['Name', 'not mentioned'], ['Day', 'friday']], 'Hotel-Request': [['Post', '?']]}
+	user: i want the Parking to be yes, i want the Name to be not mentioned, i want the Day to be friday, what is the Post
+	-- turn end ---
+Hotel-Inform
+Hotel-Request
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Name', '?'], ['Stars', '?'], ['Parking', '?'], ['Internet', '?']], 'Hotel-Inform': [['Post', 'post-value']]}
+	user da: {'Hotel-Inform': [['Internet', 'not mentioned'], ['Parking', 'yes']]}
+	user: i want the Internet to be not mentioned, i want the Parking to be yes
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Area', '?'], ['Stars', '?']]}
+	user da: {'Hotel-Inform': [['Stars', '4']]}
+	user: i want the Stars to be 4
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Parking', '?'], ['Area', '?'], ['Name', '?']]}
+	user da: {'Hotel-Inform': [['Name', 'not mentioned']]}
+	user: i want the Name to be not mentioned
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Area', '?'], ['Parking', '?']]}
+	user da: {'Hotel-Inform': [['Parking', 'yes'], ['Area', 'centre'], ['People', '8']]}
+	user: i want the Parking to be yes, i want the Area to be centre, i want the People to be 8
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Type', '?'], ['Parking', '?'], ['Internet', '?'], ['Stars', '?'], ['Area', '?']]}
+	user da: {'Hotel-Inform': [['Area', 'centre']]}
+	user: i want the Area to be centre
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Inform': [['Price', 'pricerange-value'], ['Parking', 'parking-value'], ['Internet', 'internet-value'], ['Stars', 'stars-value'], ['Name', 'name-value0'], ['Area', 'area-value'], ['Type', 'type-value']]}
+	user da: {'Hotel-Inform': [['Area', 'centre'], ['Stars', '4']]}
+	user: i want the Area to be centre, i want the Stars to be 4
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Type', '?'], ['Parking', '?'], ['Name', '?']]}
+	user da: {'general-bye': [['none', 'none']]}
+	user: bye
+	-- turn end ---
+task completion: False
+---- session end ----
+-----Goal-----
+{
+    "train": {
+        "info": {
+            "destination": "broxbourne",
+            "day": "saturday",
+            "arriveBy": "16:30",
+            "departure": "cambridge"
+        },
+        "reqt": {
+            "leaveAt": "?",
+            "price": "?",
+            "trainID": "?"
+        }
+    },
+    "hotel": {
+        "info": {
+            "type": "guesthouse",
+            "parking": "yes",
+            "stars": "4"
+        },
+        "reqt": {
+            "phone": "?"
+        }
+    }
+}
+-----Goal-----
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': '', 'day': '', 'arriveBy': '', 'departure': ''}}, 'inform_slots': {}}
+	system: {}
+	user da: {'Train-Inform': [['Dest', 'broxbourne']]}
+	user: i want the Dest to be broxbourne
+	-- turn end ---
+Train-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': 'place', 'departure': 'place', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': 'tuesday', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Train-Request': [['Leave', '?'], ['Arrive', '?']]}
+	user da: {'Train-Inform': [['Arrive', '16:30'], ['Depart', 'cambridge']]}
+	user: i want the Arrive to be 16:30, i want the Depart to be cambridge
+	-- turn end ---
+Train-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': '', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Train-Request': [['Leave', '?'], ['Day', '?'], ['Arrive', '?']]}
+	user da: {'Train-Inform': [['Arrive', '16:30'], ['Day', 'saturday']]}
+	user: i want the Arrive to be 16:30, i want the Day to be saturday
+	-- turn end ---
+Train-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': 'saturday', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Train-Request': [['Leave', '?'], ['Arrive', '?']]}
+	user da: {'Train-Inform': [['Arrive', '16:30']], 'Train-Request': [['Leave', '?']]}
+	user: i want the Arrive to be 16:30, what is the Leave
+	-- turn end ---
+Cannot handle the item in preditions: train-arrive by-16:30: 0.0857606828212738
+Train-Inform
+Train-Request
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': 'saturday', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Train-Request': [['Leave', '?'], ['Arrive', '?'], ['Leave', '?'], ['Arrive', '?']]}
+	user da: {'Train-Inform': [['Arrive', '16:30']], 'Train-Request': [['Price', '?'], ['TrainID', '?']], 'Hotel-Inform': [['Stars', '4']]}
+	user: i want the Arrive to be 16:30, what is the Price, what is the TrainID, i want the Stars to be 4
+	-- turn end ---
+Cannot handle the item in preditions: train-arrive by-16:30: 0.14585553109645844
+Train-Inform
+Train-Request
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': 'saturday', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Train-Request': [['Leave', '?'], ['Arrive', '?'], ['Leave', '?'], ['Arrive', '?']], 'Hotel-Inform': [['Type', 'type-value'], ['Internet', 'internet-value'], ['Area', 'area-value'], ['Stars', 'stars-value'], ['Parking', 'parking-value'], ['Name', 'name-value0']]}
+	user da: {'Hotel-Inform': [['Parking', 'yes'], ['Stars', '4']]}
+	user: i want the Parking to be yes, i want the Stars to be 4
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': 'saturday', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Parking', '?'], ['Price', '?'], ['Name', '?'], ['Stars', '?'], ['Type', '?'], ['Internet', '?'], ['Area', '?']]}
+	user da: {'Hotel-Inform': [['Area', 'not mentioned'], ['Internet', 'not mentioned']]}
+	user: i want the Area to be not mentioned, i want the Internet to be not mentioned
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': '', 'parking': '', 'pricerange': '', 'stars': '', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': 'saturday', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Price', '?'], ['Area', '?'], ['Type', '?']]}
+	user da: {'Hotel-Inform': [['Type', 'guesthouse'], ['Area', 'not mentioned'], ['Price', 'not mentioned']]}
+	user: i want the Type to be guesthouse, i want the Area to be not mentioned, i want the Price to be not mentioned
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': 'centre', 'parking': '', 'pricerange': 'moderate', 'stars': '4', 'internet': '', 'type': ''}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': 'saturday', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Hotel-Choice': [['Choice', 4], ['name', 'name-value3'], ['Department', 'department-value']]}
+	user da: {'Hotel-Inform': [['Stars', '4']]}
+	user: i want the Stars to be 4
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': 'centre', 'parking': '', 'pricerange': 'moderate', 'stars': '4', 'internet': '', 'type': 'guest house'}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': 'saturday', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Internet', '?'], ['Parking', '?']]}
+	user da: {'Hotel-Inform': [['Parking', 'yes']]}
+	user: i want the Parking to be yes
+	-- turn end ---
+Hotel-Inform
+	state: {'police': {'book': {'booked': []}, 'semi': {}}, 'hotel': {'book': {'booked': [], 'people': '', 'day': '', 'stay': ''}, 'semi': {'name': '', 'area': 'centre', 'parking': '', 'pricerange': 'moderate', 'stars': '4', 'internet': '', 'type': 'guest house'}}, 'attraction': {'book': {'booked': []}, 'semi': {'type': '', 'name': '', 'area': ''}}, 'restaurant': {'book': {'booked': [], 'people': '', 'day': '', 'time': ''}, 'semi': {'food': '', 'pricerange': '', 'name': '', 'area': ''}}, 'hospital': {'book': {'booked': []}, 'semi': {'department': ''}}, 'taxi': {'book': {'booked': []}, 'semi': {'leaveAt': '', 'destination': '', 'departure': '', 'arriveBy': ''}}, 'train': {'book': {'booked': [], 'people': ''}, 'semi': {'leaveAt': '', 'destination': 'place', 'day': 'saturday', 'arriveBy': '', 'departure': 'place'}}, 'inform_slots': {}}
+	system: {'Hotel-Request': [['Parking', '?'], ['Internet', '?']]}
+	user da: {'general-bye': [['none', 'none']]}
+	user: bye
+	-- turn end ---
+task completion: False
+---- session end ----
+statistics: {'success': 3, 'fail': 7}
