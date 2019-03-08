@@ -10,5 +10,6 @@ install:
   - pip install sphinx
 
 script:
+  - python setup.py
 
 deploy:
