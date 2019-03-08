@@ -5,3 +5,7 @@ python:
   - 3.5
 
 cache: pip
+
+install:
+  - pip install -e .[develop]
+  - pip install sphinx
